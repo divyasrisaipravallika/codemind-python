@@ -1,0 +1,18 @@
+def count(n):
+    c=0
+    if n<0:
+        n=n*(-1)
+    if(n>0):
+        while n!=0:
+            v=n%10
+            c=c+v
+            n=n//10
+    return c
+    
+a=int(input())
+b=list(map(int,input().split()))
+c=[]
+co=0
+for i in range(len(b)):
+    c.append(count(b[i]))
+print(sum(c))
